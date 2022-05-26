@@ -1,5 +1,16 @@
+mybutton = document.getElementById("myBtn");
 
+window.onscroll = function() {scrollFunction()};
 
-const para = document.createElement("p");
-const textNode = document.createTextNode("Hello World");
-para.appendChild(textNode) ;
+function scrollFunction () {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display ='none';
+    }
+}
+
+function topFuncton () {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
